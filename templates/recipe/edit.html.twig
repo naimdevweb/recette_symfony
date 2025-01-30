@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}✏️ Modifier la Recette{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <!-- Titre avec bouton de retour -->
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <h1 class="text-dark fw-bold display-4">
+            <i class="fas fa-utensils"></i> Modifier la Recette
+        </h1>
+        <a href="{{ path('app_recipe_index') }}" class="btn btn-outline-primary text-primary shadow-lg px-4 py-2">
+            <i class="fas fa-arrow-left"></i> Retour à la liste
+        </a>
+    </div>
+
+    <!-- Formulaire dans une carte élégante -->
+    <div class="card border-0 shadow-lg rounded-5 mb-5">
+        <div class="card-header bg-gradient text-white text-center py-4" style="background: linear-gradient(45deg, #56CCF2, #2F80ED);">
+            <h4 class="mb-0"><i class="fas fa-edit"></i> Modifier votre recette</h4>
+        </div>
+        <div class="card-body p-5">
+            {{ form_start(form, {'attr': {'class': 'needs-validation', 'novalidate': 'novalidate'}}) }}
+            
+            <div class="mb-4">
+                {{ form_label(form.name) }}
+                <div class="input-group">
+                    {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                {{ form_errors(form.name) }}
+            </div>
+
+            <div class="mb-4">
+                {{ form_label(form.description) }}
+                <div class="input-group">
+                    {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                {{ form_errors(form.description) }}
+            </div>
+
+            <div class="mb-4">
+                {{ form_label(form.slug) }}
+                <div class="input-group">
+                    {{ form_widget(form.slug, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                {{ form_errors(form.slug) }}
+            </div>
+
+          
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+    <!-- Section de suppression avec style élégant -->
+    <div class="mt-5 text-center">
+        <h5 class="text-danger mb-3"><i class="fas fa-exclamation-circle"></i> Supprimer cette recette</h5>
+        <p class="text-muted mb-4">Cette action est irréversible. Si vous êtes sûr, vous pouvez supprimer cette recette.</p>
+        <div class="d-flex justify-content-center">
+            <div class="bg-light shadow-lg p-4 rounded-4">
+                {{ include('recipe/_delete_form.html.twig') }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

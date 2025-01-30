@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer une Recette{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/test.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Carte principale -->
+            <div class="card shadow-lg rounded-5">
+                <div class="card-header bg-danger text-white text-center rounded-5">
+                    <h2 class="mb-0">Créer une nouvelle recette</h2>
+                </div>
+                <div class="card-body">
+                   
+                    
+                    <!-- Formulaire de création de recette -->
+                    {{ form_start(form, {'attr': {'class': 'needs-validation', 'novalidate': 'novalidate'}}) }}
+
+                    <!-- Champs de formulaire -->
+                    <div class="mb-4">
+                        {{ form_label(form.name, null, {'label_attr': {'class': 'form-label text-dark'}}) }}
+                        <div class="form-group">
+                            {{ form_widget(form.name, {'attr': {'class': 'form-control shadow-sm border-0 rounded-pill'}}) }}
+                            {{ form_errors(form.name) }}
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        {{ form_label(form.description, null, {'label_attr': {'class': 'form-label text-dark'}}) }}
+                        <div class="form-group">
+                            {{ form_widget(form.description, {'attr': {'class': 'form-control shadow-sm border-0 rounded-pill'}}) }}
+                            {{ form_errors(form.description) }}
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        {{ form_label(form.slug, null, {'label_attr': {'class': 'form-label text-dark'}}) }}
+                        <div class="form-group">
+                            {{ form_widget(form.slug, {'attr': {'class': 'form-control shadow-sm border-0 rounded-pill'}}) }}
+                            {{ form_errors(form.slug) }}
+                        </div>
+                    </div>
+
+                    <!-- Boutons stylisés -->
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <!-- Bouton retour à la liste -->
+                        <a href="{{ path('app_recipe_index') }}" class="btn btn-outline-primary px-4 py-2 rounded-pill shadow-sm">
+                            <i class="fas fa-arrow-left"></i> Retour à la liste
+                        </a>
+
+                        <!-- Bouton d'envoi du formulaire -->
+                        <button type="submit" class="btn btn-danger px-5 py-3 rounded-pill shadow-lg">
+                            <i class="fas fa-save"></i> Enregistrer la recette
+                        </button>
+                    </div>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
