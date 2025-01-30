@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recipe{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/test.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <!-- Titre de la page -->
+        <div class="page-header">
+            <h1 class="page-title">Detail de la recette</h1>
+        </div>
+
+        <!-- Détails de la recette -->
+        <div class="recipe-details">
+            <table class="recipe-table">
+                <tbody>
+                    
+                    <tr>
+                        <th>Nom</th>
+                        <td>{{ recipe.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>{{ recipe.description }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Actions disponibles -->
+        <div class="actions">
+            <a href="{{ path('app_recipe_index') }}" class="btn-action">Revenir a la liste</a>
+            <a href="{{ path('app_recipe_edit', {'slug': recipe.slug}) }}" class="btn-action">Modifier</a>
+        </div>
+
+        <!-- Formulaire de suppression -->
+        
+         <div class="delete-form mt-4 text-center">
+            <h5 class="text-danger">Etes vous sur de vouloir supprimer cette recette?</h5>
+            <div>
+            {{ include('recipe/_delete_form.html.twig') }}
+        </div>
+    
+{% endblock %}

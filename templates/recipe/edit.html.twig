@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Recipe{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/test.css') }}">
+{% endblock %}
+{% block body %}
+    <div class="container mt-5">
+        <!-- Titre de la page -->
+        <div class="row mb-4">
+            <div class="col text-center">
+                <h1 class="display-4 text-primary">Modifier la recette</h1>
+            </div>
+        </div>
+
+        <!-- Formulaire d'édition -->
+        <div class="card shadow-lg rounded-3">
+            <div class="card-header bg-primary text-white text-center">
+                <h3>Modifier</h3>
+            </div>
+            <div class="card-body">
+                {{ include('recipe/_form.html.twig', {'button_label': ' Modifier la recette'}) }}
+            </div>
+        </div>
+
+        <!-- Bouton retour à la liste -->
+        <div class="d-flex justify-content-between mt-3">
+            <a href="{{ path('app_recipe_index') }}" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left"></i> Revenir à la liste
+            </a>
+        </div>
+
+        <!-- Section pour supprimer la recette -->
+        <div class="delete-form mt-4 text-center">
+            <h5 class="text-danger">Etes vous sur de vouloir supprimer cette recette?</h5>
+            <div>
+                {{ include('recipe/_delete_form.html.twig') }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

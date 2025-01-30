@@ -1,0 +1,591 @@
+/* Page new recipe */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Section du titre */
+.title-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* Style pour la carte de formulaire */
+.form-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+/* Style du formulaire (inputs, labels, etc.) */
+.form-body input,
+.form-body select,
+.form-body textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-body input:focus,
+.form-body select:focus,
+.form-body textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Bouton retour à la liste */
+.back-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+/* page index */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Titre principal */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Tableaux */
+.table-card {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.recipe-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.recipe-table th, .recipe-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.recipe-table th {
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.recipe-table td {
+    background-color: #f9f9f9;
+}
+
+.recipe-table tr:hover td {
+    background-color: #ecf0f1;
+}
+
+/* Liens d'action (show, edit) */
+.action-link {
+    text-decoration: none;
+    color: #3498db;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.action-link:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+/* Message "no records" */
+.no-records {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+}
+
+/* Lien "Create New Recipe" */
+.create-recipe {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.create-link {
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.create-link:hover {
+    background-color: #2980b9;
+}
+
+
+
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Titre de la page */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Détails de la recette */
+.recipe-details {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.recipe-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.recipe-table th, .recipe-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.recipe-table th {
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.recipe-table td {
+    background-color: #f9f9f9;
+}
+
+.recipe-table tr:hover td {
+    background-color: #ecf0f1;
+}
+
+/* Liens d'action */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-action {
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #2980b9;
+}
+
+/* Section de suppression */
+/* Modifications de la section delete-form */
+.delete-form {
+    margin-top: 50px; /* Augmenter l'espacement pour mieux séparer du contenu précédent */
+    text-align: center;
+    padding: 15px; /* Ajouter un peu de padding pour un meilleur aspect visuel */
+    border-radius: 8px; /* Arrondir légèrement les bords */
+   
+}
+
+/* Modifications du bouton de suppression */
+.btn {
+    color: white; /* Texte blanc pour contraster avec le rouge */
+    background-color: #e74c3c; /* Rouge vif pour attirer l'attention */
+    padding: 12px 25px; /* Taille agréable pour le bouton */
+    font-size: 1.1rem; /* Taille de police légèrement plus grande */
+    border-radius: 5px; /* Coins arrondis pour plus de douceur */
+    border: none; /* Suppression de la bordure pour un style plus propre */
+    cursor: pointer; /* Curseur pointer pour indiquer que c'est cliquable */
+    transition: all 0.3s ease; /* Animation fluide au survol */
+}
+
+/* Effet de survol du bouton */
+.btn:hover {
+    background-color: #c0392b; /* Un rouge un peu plus foncé au survol */
+    transform: translateY(-3px); /* Effet de soulèvement au survol */
+}
+
+/* Effet de clic du bouton */
+.btn:active {
+    background-color: #e74c3c; /* Retour à la couleur rouge initiale au clic */
+    transform: translateY(2px); /* Légère compression pour l'effet de clic */
+}
+
+.btn:focus {
+    outline: none; /* Enlever le contour de focus par défaut */
+}
+
+
+
+
+
+
+/* Pour la carte */
+.card {
+    border-radius: 10px; /* Coins arrondis */
+    border: 1px solid #ddd; /* Bordure fine */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-bottom: 20px;
+}
+
+/* Titre de la carte */
+.card-header {
+    background-color: #007bff; /* Fond bleu */
+    color: white; /* Texte blanc */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Formulaire et champs */
+form {
+    margin-top: 20px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; /* Espacement entre les champs */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* Bouton de soumission */
+button {
+    background-color: #28a745; /* Vert */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838; /* Vert plus foncé au survol */
+}
+
+/* Bouton retour à la liste */
+.btn-outline-secondary {
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #f8f9fa;
+}
+
+/* Section de suppression */
+.delete-form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8d7da; /* Fond rose très clair */
+    border-radius: 8px;
+    border: 1px solid #f5c6cb;
+}
+
+.delete-form h5 {
+    color: #dc3545; /* Texte rouge */
+}
+
+.delete-form p {
+    color: #6c757d; /* Texte gris */
+}
+
+.delete-form button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.delete-form button:hover {
+    background-color: #c82333; /* Rouge plus foncé */
+}
+
+
+
+
+
+/* -----------------------------
+   Global Style
+----------------------------- */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* -----------------------------
+   Container and Card Design
+----------------------------- */
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 30px;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* -----------------------------
+   Form Inputs and Buttons
+----------------------------- */
+
+input, textarea, select {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #2575fc;
+    outline: none;
+    background-color: #eaf4ff;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6a11cb;
+}
+
+button:disabled {
+    background-color: #b0b0b0;
+    cursor: not-allowed;
+}
+
+/* -----------------------------
+   Back to List Button
+----------------------------- */
+
+.btn-outline-secondary {
+    background-color: blue;
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #2575fc;
+    color: white;
+}
+
+/* -----------------------------
+   Delete Section
+----------------------------- */
+
+.delete-form {
+    padding: 20px;
+    background-color: #fce4e4;
+    border-radius: 10px;
+    border: 1px solid #f3b1b1;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.delete-form h5 {
+    color: #dc3545;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.delete-form p {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.delete-form button {
+    padding: 12px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.delete-form button:hover {
+    background-color: #c82333;
+}
+
+.delete-form button:focus {
+    outline: none;
+}
+
+/* -----------------------------
+   Responsive Design
+----------------------------- */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card-header {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+
+.envoyer {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
