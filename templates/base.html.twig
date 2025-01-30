@@ -11,6 +11,16 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
+
+    {% block header %}
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{{ path('app_recipe_index') }}">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+    {% endblock %}
     <body>
         {% block body %}{% endblock %}
     </body>

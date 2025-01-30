@@ -42,13 +42,7 @@ final class RecipeController extends AbstractController{
         ]);
     }
 
-    #[Route('/{id}', name: 'app_recipe_show', methods: ['GET'])]
-    public function show(Recipe $recipe): Response
-    {
-        return $this->render('recipe/show.html.twig', [
-            'recipe' => $recipe,
-        ]);
-    }
+   
 
 
     
@@ -72,7 +66,7 @@ final class RecipeController extends AbstractController{
         ]);
     }
 
-    
+
 
     #[Route('/{id}', name: 'app_recipe_delete', methods: ['POST'])]
     public function delete(Request $request, Recipe $recipe, EntityManagerInterface $entityManager): Response
