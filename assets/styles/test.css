@@ -589,3 +589,95 @@ button:disabled {
     font-size: 1.1rem;
     transition: background-color 0.3s;
 }
+
+
+
+
+
+/* -----------------------------
+   Global Header Styling
+----------------------------- */
+
+.main-header {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Dégradé chaud et dynamique */
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+/* -----------------------------
+   Navigation Styling
+----------------------------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* -----------------------------
+   Logo Styling
+----------------------------- */
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover {
+    transform: scale(1.1);
+}
+
+/* -----------------------------
+   Navigation Links
+----------------------------- */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffebcd;
+}
+
+/* -----------------------------
+   Responsive Design (Mobile)
+----------------------------- */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

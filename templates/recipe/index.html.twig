@@ -1,52 +1,61 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Recipe index{% endblock %}
+{% block title %}Recipe index
+{% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('styles/test.css') }}">
+	<link rel="stylesheet" href="{{ asset('styles/test.css') }}">
 {% endblock %}
 
 {% block body %}
-    <div class="container">
-        <!-- Titre de la page -->
-        <div class="page-header">
-            <h1 class="page-title">Recette</h1>
-        </div>
+	<div
+		class="container">
+		<!-- Titre de la page -->
+		<div class="page-header">
+			<h1 class="page-title">Recette</h1>
+		</div>
 
-        <!-- Tableau des recettes -->
-        <div class="table-card">
-            <table class="recipe-table">
-                <thead>
-                    <tr>
-                       
-                        <th>Nom</th>
-                        <th>Description</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for recipe in recipes %}
-                        <tr>
-                            
-                            <td>{{ recipe.name }}</td>
-                            <td>{{ recipe.description }}</td>
-                           <td>
-    <a href="{{ path('app_recipe_show', {'slug': recipe.slug}) }}" class="action-link">Voir</a>
-    <a href="{{ path('app_recipe_edit', {'slug': recipe.slug}) }}" class="action-link">Modifer</a>
-</td>
-                        </tr>
-                    {% else %}
-                        <tr>
-                            <td colspan="4" class="no-records">Aucune recette trouver</td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+		<!-- Tableau des recettes -->
+		<div class="table-card">
+			<table class="recipe-table">
+				<thead>
+					<tr>
 
-        <!-- Lien pour créer une nouvelle recette -->
-        <div class="create-recipe">
-            <a href="{{ path('app_recipe_new') }}" class="create-link">Cree une nouvelle recette</a>
-        </div>
-    </div>
-{% endblock %}
+						<th>Nom</th>
+						<th>Description</th>
+						<th>Actions</th>
+						<th>slug</th>
+						<th>Category</th>
+                        <th>Rcette ajoutee par</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for recipe in recipes %}
+						<tr>
+
+							<td>{{ recipe.name }}</td>
+							<td>{{ recipe.description }}</td>
+
+
+							<td>
+								<a href="{{ path('app_recipe_show', {'slug': recipe.slug}) }}" class="action-link">Voir</a>
+
+								{% if app.user == recipe.user %}
+									<a href="{{ path('app_recipe_edit', {'slug': recipe.slug}) }}" class="action-link">Modifer</a>
+								{% endif %}
+							</td>
+							<td>{{ recipe.slug }}</td>
+							<td>{{ recipe.category }}</td>
+                            <td>{{ recipe.user.pseudo }}</td>
+						</tr>
+					</td>
+				</tbody>
+			</tr>
+		{% else %}
+			<tr>
+				<td colspan="4" class="no-records">Aucune recette trouver</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table></div><!-- Lien pour créer une nouvelle recette --><div class="create-recipe">
+<a href="{{ path('app_recipe_new') }}" class="create-link">Cree une nouvelle recette</a></div></div>{% endblock %}

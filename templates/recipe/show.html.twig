@@ -26,6 +26,19 @@
                         <th>Description</th>
                         <td>{{ recipe.description }}</td>
                     </tr>
+
+                     <tr>
+                        <th>Category</th>
+                        <td>{{ recipe.category }}</td>
+                    </tr>
+
+                    <tr>
+                        <th>Recette ajoutee par</th>
+                        <td>{{ recipe.user.pseudo }}</td>
+                    </tr>
+
+                 
+
                 </tbody>
             </table>
         </div>
@@ -33,15 +46,22 @@
         <!-- Actions disponibles -->
         <div class="actions">
             <a href="{{ path('app_recipe_index') }}" class="btn-action">Revenir a la liste</a>
-            <a href="{{ path('app_recipe_edit', {'slug': recipe.slug}) }}" class="btn-action">Modifier</a>
+            {% if app.user == recipe.user %}
+                <a href="{{ path('app_recipe_edit', {'slug': recipe.slug}) }}" class="btn-action">Modifier</a>
+            {% endif %}
+
+            
+           
         </div>
 
         <!-- Formulaire de suppression -->
-        
+           {% if app.user == recipe.user %}
          <div class="delete-form mt-4 text-center">
             <h5 class="text-danger">Etes vous sur de vouloir supprimer cette recette?</h5>
             <div>
+         
             {{ include('recipe/_delete_form.html.twig') }}
+            {% endif %}
         </div>
     
 {% endblock %}
